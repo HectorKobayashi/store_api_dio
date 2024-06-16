@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from tdd_project.core.config import settings
+from tdd_project.routers import api_router
 
 
 class App(FastAPI):
@@ -14,3 +15,4 @@ class App(FastAPI):
 
 
 app = App()
+app.include_router(api_router)
